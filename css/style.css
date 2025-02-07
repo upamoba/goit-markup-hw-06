@@ -26,12 +26,10 @@
 body {
   font-family: "Roboto", sans-serif #434455;
   background-color: #ffffff;
-}
-html,
-body {
   overflow-x: hidden;
   width: 100%;
 }
+
 * {
   padding: 0;
   box-sizing: border-box;
@@ -866,6 +864,101 @@ a {
 .submit-btn:focus {
   background-color: #404bbf;
 }
+/* menu mobil*/
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+.menu-icon {
+  width: 30px;
+  height: 3px;
+  background: #2e2f42;
+  display: block;
+  position: relative;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: "";
+  width: 30px;
+  height: 3px;
+  background: #2e2f42;
+  position: absolute;
+  left: 0;
+}
+
+.menu-icon::before {
+  top: -8px;
+}
+.menu-icon::after {
+  bottom: -8px;
+}
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.mobile-menu.is-open {
+  transform: translateY(0);
+}
+
+.mobile-nav-list {
+  list-style: none;
+  text-align: center;
+}
+
+.mobile-nav-list a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 24px;
+  display: block;
+  padding: 10px;
+}
+.close-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.mobile-contact {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.mobile-social {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.mobile-social a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #4d5ae5;
+}
+
 /* Мобільні пристрої (320px - 767px) */
 @media (max-width: 767px) {
   .nav-list {
@@ -874,62 +967,10 @@ a {
 
   .menu-toggle {
     display: block;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-  }
-
-  .mobile-menu {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-  }
-
-  .mobile-menu.is-open {
-    display: flex;
-  }
-
-  .menu-close {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-  }
-
-  .mobile-nav-list {
-    list-style: none;
-    text-align: center;
-  }
-
-  .mobile-nav-list li {
-    margin: 15px 0;
-  }
-
-  .mobile-nav-list a {
-    text-decoration: none;
-    color: white;
-    font-size: 24px;
-  }
-
-  .contact-info {
-    display: none;
   }
   .team-list {
-    display: flex;
+    align-items: center;
     flex-direction: column;
-    gap: 12px;
   }
 }
 
@@ -940,11 +981,9 @@ a {
   }
   .container {
     max-width: 768px;
-    padding: 20px;
   }
   .footer-container {
     max-width: 768px;
-    padding: 20px;
   }
   .hero-title {
     font-size: 36px;
@@ -953,15 +992,6 @@ a {
   .team-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-
-  .team-member {
-    max-width: 220px;
-  }
-
-  .footer {
-    text-align: left;
   }
 }
 
@@ -969,11 +999,9 @@ a {
 @media (min-width: 1158px) {
   .container {
     max-width: 1158px;
-    padding: 32px;
   }
   .footer-container {
     max-width: 1158px;
-    padding: 32px;
   }
   .hero-title {
     font-size: 48px;
