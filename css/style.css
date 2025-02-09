@@ -1008,7 +1008,7 @@ a {
   }
 
   .team-member {
-    max-width: 280px;
+    max-width: 1158px;
   }
   .team-list {
     grid-template-columns: repeat(4, 1fr);
