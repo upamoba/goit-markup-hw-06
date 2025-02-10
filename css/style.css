@@ -468,20 +468,52 @@ button {
   overflow: hidden;
 }
 .approach {
+  max-width: 320px;
   padding: 96px 16px;
+  margin: 0 auto;
 }
 .approach-list {
-  list-style: none;
   display: flex;
-  justify-content: center;
-  gap: 24px;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-}.approach-item {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 72px;
+}
+.approach-item {
+  text-align: center;
   text-align: left;
   width: calc((100% - 72px) / 4);
 }
-.icon-container{
-display: none;
+.icon-container {
+  display: none;
+}
+.approach-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  margin-bottom: 8px;
+}
+.approach-description {
+  width: 288px;
+  height: 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8;
+  padding: 0px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+  text-align: left;
+ padding-right:  20px;
 }
