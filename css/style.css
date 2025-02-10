@@ -480,8 +480,6 @@ button {
   gap: 72px;
 }
 .approach-item {
-  text-align: center;
-  text-align: left;
   width: calc((100% - 72px) / 4);
 }
 .icon-container {
@@ -515,5 +513,62 @@ button {
   letter-spacing: 0.02em;
   color: #434455;
   text-align: left;
- padding-right:  20px;
+  padding-right: 20px;
+}
+@media screen and (min-width: 768px) {
+  .approach {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  .approach-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 24px;
+    row-gap: 70px;
+  }
+  .approach-item {
+    width: calc((100% - 24px) / 2);
+  }
+  .proach-heading {
+    font-family: "Roboto", sans-serif;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .approach {
+    min-width: 1128px;
+    padding: 120px 0;
+  }
+
+  .approach-list {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 24px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .approach-item {
+    max-width: calc((100% - 72px) / 4);
+  }
+  .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 264px;
+    height: 112px;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    border: 1px solid #8e8f99;
+    margin-bottom: 8px;
+  }
+
+  .ico-antenna,
+  .ico-clock,
+  .ico-diagram,
+  .ico-astronaut {
+    padding: 24px 100px;
+  }
+
+  .approach-heading {
+    font-size: 20px;
+    font-weight: 500;
+  }
 }
