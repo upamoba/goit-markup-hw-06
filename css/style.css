@@ -945,58 +945,12 @@ a {
 }
 /* Мобільні пристрої (320px - 767px) */
 @media (max-width: 767px) {
-  .nav-list {
-    display: none;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
 }
 
 /* Планшети (768px - 1157px) */
 @media (min-width: 768px) {
-  .mobile-menu {
-    display: none;
-  }
-  .container {
-    max-width: 768px;
-  }
-  .footer-container {
-    max-width: 768px;
-  }
-  .hero-title {
-    font-size: 36px;
-  }
-
-  .team-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 /* Десктопи (1158px і більше) */
 @media (min-width: 1158px) {
-  .container {
-    max-width: 1158px;
-  }
-  .footer-container {
-    max-width: 1158px;
-  }
-  .hero-title {
-    font-size: 48px;
-  }
-
-  .team-member {
-    max-width: 1158px;
-  }
-  .team-list {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-  }
-}
-@media (min-resolution: 2dppx) {
-  .hero {
-    background-image: url("../images/people-office@2x.jpg");
-  }
 }
