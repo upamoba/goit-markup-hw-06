@@ -617,15 +617,19 @@ p {
   background-color: #4d5ae5;
   border: none;
 }
-
+.send_button:hover,
+.send_button:focus {
+  background-color: #31d0aa;
+}
 .footer-form-icon {
   margin-left: 16px;
+  fill: #ffffff;
 }
 
 .backdrop {
-  opacity: 0;
+  /* opacity: 0;
   visibility: hidden;
-  pointer-events: none;
+  pointer-events: none;*/
   width: 100%;
   height: 100%;
   position: fixed;
@@ -635,24 +639,65 @@ p {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.modal {
+  width: 408px;
+  min-height: 584px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 24px;
+  padding-top: 72px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.btn_quit:hover,
+.btn_quit:focus {
+  background-color: #404bbf;
+  border: none;
+}
+.modal-input-check:checked + .modal-label-check .check-icon-span {
+  background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
+}
 
 .menu-backdrop {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 
-  width: 100%;
-  height: 100%;
   position: fixed;
-  background-color: #fff;
   top: 0;
   left: 0;
-  z-index: 999;
-
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.menu-backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.mob-header-icon {
+  cursor: pointer;
+}
+.mob-header-icon:hover,
+.mob-header-icon:focus {
+  color: #4d5ae5;
+}
 .menu-modal {
   position: relative;
   padding-top: 72px;
@@ -661,15 +706,13 @@ p {
   flex-direction: column;
   height: 100%;
 }
-
+.menu-mob-items-nav {
+  margin-bottom: auto;
+}
 .menu-mob-items-nav-list {
   display: flex;
   flex-direction: column;
   gap: 40px;
-}
-
-.menu-mob-items-nav {
-  margin-bottom: auto;
 }
 
 .social-mob-menu-list {
@@ -727,39 +770,16 @@ p {
   margin-bottom: 16px;
 }
 
-.modal {
-  width: 408px;
-  min-height: 584px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fcfcfc;
-  border-radius: 4px;
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-bottom: 24px;
-  padding-top: 72px;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-}
-
-.is-open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
 @media screen and (max-width: 767px) {
   .modal {
+    position: fixed;
     width: 320px;
+    margin-top: 8px;
+    margin-bottom: 9px;
     padding-left: 16px;
     padding-right: 16px;
-  }
-
-  .menu-backdrop {
-    display: none;
+    max-width: 288px;
+    max-height: 623px;
   }
 }
 
@@ -782,16 +802,15 @@ p {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .btn_quit {
-    background-color: #fff;
-  }
-}
-
 .btn_quit:hover,
 .btn_quit:focus {
   background-color: #404bbf;
   border: none;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .btn_quit {
+    background-color: #fff;
+  }
 }
 
 .close-icon {
@@ -867,7 +886,7 @@ p {
 .wrapper {
   margin-bottom: 8px;
 }
-
+.modal-input:hover,
 .modal-input:focus {
   border-color: #4d5ae5;
 }
@@ -971,15 +990,18 @@ p {
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-input-check:checked + .modal-label-check .check-icon-span {
+/*.modal-input-check:checked + .modal-label-check .check-icon-span {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
-}
+}*/
 
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
+  }
+  .menu-backdrop {
+    display: none;
   }
   .mob-header-icon-button {
     display: none;
