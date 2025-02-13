@@ -694,10 +694,6 @@ p {
 .mob-header-icon {
   cursor: pointer;
 }
-.mob-header-icon:hover,
-.mob-header-icon:focus {
-  color: #4d5ae5;
-}
 .menu-modal {
   position: relative;
   padding-top: 72px;
