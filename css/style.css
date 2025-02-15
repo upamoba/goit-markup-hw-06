@@ -477,8 +477,6 @@ ul {
 }
 
 .information_block_footer {
-  max-width: 264px;
-  display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
@@ -676,11 +674,9 @@ p {
   display: flex;
   flex-direction: column;
   max-width: 320px;
-  height: 640px;
+  height: 100%;
 }
-.mob-adres-social {
-  margin-top: auto;
-}
+
 .menu-mob-items-nav {
   margin-bottom: auto;
 }
@@ -753,6 +749,9 @@ p {
     padding-right: 16px;
     max-width: 288px;
     max-height: 623px;
+  }
+  .navigation_footer {
+    margin-left: 86px;
   }
 }
 
@@ -1073,7 +1072,7 @@ p {
 
   .information_block_footer {
     align-items: flex-start;
-
+    margin-bottom: 72px;
     flex-direction: column;
   }
 
